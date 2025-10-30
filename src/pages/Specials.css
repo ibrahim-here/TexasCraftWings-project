@@ -1,0 +1,130 @@
+.specials-page {
+  min-height: 100vh;
+}
+
+.specials-hero {
+  background: linear-gradient(135deg, var(--primary-brand-orange) 0%, #d9531a 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.specials-hero h1 {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.specials-hero-text {
+  font-size: 1.3rem;
+  color: var(--light-neutral-off-white);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.special-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.special-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(231, 106, 36, 0.3);
+  border-color: var(--primary-brand-orange);
+}
+
+.special-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-light-peach), white);
+  position: relative;
+}
+
+.special-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.special-card:hover .special-image img {
+  transform: scale(1.1);
+}
+
+.special-content {
+  padding: 2rem;
+}
+
+.special-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark-charcoal);
+}
+
+.special-description {
+  color: var(--text-dark-charcoal);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.special-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--divider-gray);
+}
+
+.special-valid {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-brand-orange);
+}
+
+.btn-claim-offer {
+  background-color: var(--primary-brand-orange);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-claim-offer:hover {
+  background-color: var(--hover-orange);
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .specials-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .special-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-claim-offer {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,143 @@
+.locations-page {
+  min-height: 100vh;
+}
+
+.locations-hero {
+  background: linear-gradient(135deg, var(--primary-brand-orange) 0%, #d9531a 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.locations-hero h1 {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.locations-hero-text {
+  font-size: 1.3rem;
+  color: var(--accent-light-peach);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.location-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.location-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--divider-gray);
+}
+
+.location-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover .location-image img {
+  transform: scale(1.1);
+}
+
+.location-info {
+  padding: 2rem;
+}
+
+.location-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark-charcoal);
+}
+
+.location-details {
+  margin-bottom: 1.5rem;
+}
+
+.location-details p {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark-charcoal);
+}
+
+.location-address {
+  font-weight: 600;
+}
+
+.location-phone {
+  color: var(--primary-brand-orange);
+  font-weight: 600;
+}
+
+.location-hours {
+  font-size: 0.9rem;
+  color: rgba(42, 42, 42, 0.7);
+}
+
+.location-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-get-directions,
+.btn-order-now {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-get-directions {
+  background-color: white;
+  color: var(--primary-brand-orange);
+  border: 2px solid var(--primary-brand-orange);
+}
+
+.btn-get-directions:hover {
+  background-color: var(--primary-brand-orange);
+  color: white;
+}
+
+.btn-order-now {
+  background-color: var(--primary-brand-orange);
+  color: white;
+}
+
+.btn-order-now:hover {
+  background-color: var(--hover-orange);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .locations-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-actions {
+    flex-direction: column;
+  }
+}
+

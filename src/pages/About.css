@@ -1,0 +1,136 @@
+.about-page {
+  min-height: 100vh;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, var(--primary-brand-orange) 0%, #d9531a 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.about-hero h1 {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero-text {
+  font-size: 1.3rem;
+  color: var(--accent-light-peach);
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about-section.reverse {
+  direction: rtl;
+}
+
+.about-section.reverse > * {
+  direction: ltr;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark-charcoal);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.values-section {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.values-section h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark-charcoal);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background: linear-gradient(135deg, var(--accent-light-peach) 0%, white 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark-charcoal);
+}
+
+.value-card p {
+  color: var(--text-dark-charcoal);
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section.reverse {
+    direction: ltr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .values-section h2 {
+    font-size: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

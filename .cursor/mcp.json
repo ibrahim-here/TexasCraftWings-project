@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "reactbits": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@rpironato/mcp-reactbits-server@latest"
+      ]
+    }
+  }
+}
+
+
