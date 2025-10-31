@@ -10,7 +10,6 @@ const Header = () => {
     { path: '/', label: 'HOME' },
     { path: '/menu', label: 'MENU' },
     { path: '/locations', label: 'LOCATIONS' },
-    { path: '/specials', label: 'SPECIALS' },
     { path: '/about', label: 'ABOUT' },
     { path: '/contact', label: 'CONTACT' },
   ]
@@ -40,7 +39,15 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <button className="cta-button">ORDER NOW</button>
+          <a
+            className="cta-button"
+            href="https://order.toasttab.com/online/texas-craft-wings-lake-conroe"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Order online via Toast"
+          >
+            ORDER NOW
+          </a>
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
             <span className={`hamburger ${menuOpen ? 'active' : ''}`}></span>
           </button>

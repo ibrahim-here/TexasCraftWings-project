@@ -28,7 +28,8 @@ const Menu = () => {
 
       if (data && data.length > 0) {
         setMenuItems(data)
-        const uniqueCategories = [...new Set(data.map(item => item.category))]
+        const normalize = (value) => (value ?? '').toString().trim().toLowerCase()
+        const uniqueCategories = [...new Set(data.map(item => normalize(item.category)).filter(Boolean))]
         setCategories(['all', ...uniqueCategories])
       } else {
         // Fallback to sample data if database is empty
@@ -70,9 +71,10 @@ const Menu = () => {
     setCategories(['all', 'wings', 'sandwiches', 'sides'])
   }
 
-  const filteredItems = selectedCategory === 'all' 
-    ? menuItems 
-    : menuItems.filter(item => item.category === selectedCategory)
+  const normalize = (value) => (value ?? '').toString().trim().toLowerCase()
+  const filteredItems = selectedCategory === 'all'
+    ? menuItems
+    : menuItems.filter(item => normalize(item.category) === selectedCategory)
 
   if (loading) {
     return (
@@ -98,15 +100,20 @@ const Menu = () => {
       <section className="menu-content section-padding">
         <div className="container">
           <div className="category-filter">
-            {categories.map(category => (
-              <button
-                key={category}
-                className={`filter-button ${selectedCategory === category ? 'active' : ''}`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category.toUpperCase()}
-              </button>
-            ))}
+            {categories.map(categoryKey => {
+              const label = categoryKey === 'all'
+                ? 'ALL'
+                : categoryKey.replace(/\b\w/g, (c) => c.toUpperCase())
+              return (
+                <button
+                  key={categoryKey}
+                  className={`filter-button ${selectedCategory === categoryKey ? 'active' : ''}`}
+                  onClick={() => setSelectedCategory(categoryKey)}
+                >
+                  {label}
+                </button>
+              )
+            })}
           </div>
 
           <div className="menu-grid">
@@ -122,7 +129,15 @@ const Menu = () => {
                   <p className="menu-card-description">{item.description}</p>
                   <div className="menu-card-footer">
                     <span className="menu-card-price">${item.price.toFixed(2)}</span>
-                    <button className="add-to-cart">Add to Cart</button>
+                    <a
+                      className="add-to-cart"
+                      href="https://order.toasttab.com/online/texas-craft-wings-lake-conroe"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Order ${item.name} via Toast`}
+                    >
+                      Order Now
+                    </a>
                   </div>
                 </div>
               </div>

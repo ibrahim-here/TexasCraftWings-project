@@ -4,27 +4,11 @@ const Locations = () => {
   const locations = [
     {
       id: 1,
-      name: 'Downtown Austin',
-      address: '123 Main Street, Austin, TX 78701',
-      phone: '(512) 555-0100',
+      name: 'Texas Craft Wings - Lake Conroe',
+      address: 'Lake Conroe, TX',
+      phone: '',
       hours: 'Mon-Sat: 11AM-11PM | Sun: 12PM-9PM',
-      image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600'
-    },
-    {
-      id: 2,
-      name: 'Houston Heights',
-      address: '456 Heights Blvd, Houston, TX 77008',
-      phone: '(713) 555-0101',
-      hours: 'Mon-Sat: 11AM-11PM | Sun: 12PM-9PM',
-      image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600'
-    },
-    {
-      id: 3,
-      name: 'Dallas Deep Ellum',
-      address: '789 Commerce Street, Dallas, TX 75201',
-      phone: '(214) 555-0102',
-      hours: 'Mon-Sat: 11AM-11PM | Sun: 12PM-9PM',
-      image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600'
+      image: 'https://tse1.mm.bing.net/th/id/OIP.5zMtFhQ46NpCL9DqF6d6SgHaHa?pid=Api&P=0&h=220'
     },
   ]
 
@@ -34,7 +18,7 @@ const Locations = () => {
         <div className="container">
           <h1>Find Us</h1>
           <p className="locations-hero-text">
-            Come visit us at one of our locations across Texas
+            Visit our Lake Conroe location
           </p>
         </div>
       </section>
@@ -50,13 +34,25 @@ const Locations = () => {
                 <div className="location-info">
                   <h3>{location.name}</h3>
                   <div className="location-details">
-                    <p className="location-address">{location.address}</p>
-                    <p className="location-phone">{location.phone}</p>
-                    <p className="location-hours">{location.hours}</p>
+                    {location.address ? (
+                      <p className="location-address">{location.address}</p>
+                    ) : null}
+                    {location.phone ? (
+                      <p className="location-phone">{location.phone}</p>
+                    ) : null}
+                    {location.hours ? (
+                      <p className="location-hours">{location.hours}</p>
+                    ) : null}
                   </div>
                   <div className="location-actions">
-                    <button className="btn-get-directions">Get Directions</button>
-                    <button className="btn-order-now">Order Now</button>
+                    <a
+                      className="btn-order-now"
+                      href="https://order.toasttab.com/online/texas-craft-wings-lake-conroe"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Order Now
+                    </a>
                   </div>
                 </div>
               </div>

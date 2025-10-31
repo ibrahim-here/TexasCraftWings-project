@@ -29,7 +29,6 @@ const Footer = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/menu">Menu</Link></li>
               <li><Link to="/locations">Locations</Link></li>
-              <li><Link to="/specials">Specials</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
@@ -63,7 +62,15 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-            <button className="footer-cta">ORDER ONLINE</button>
+            <a
+              className="footer-cta"
+              href="https://order.toasttab.com/online/texas-craft-wings-lake-conroe"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Order online via Toast"
+            >
+              ORDER ONLINE
+            </a>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import './Hero.css'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -17,8 +18,18 @@ const Hero = () => {
             From classic buffalo to our signature craft flavors, every bite is a journey.
           </p>
           <div className="hero-actions">
-            <button className="btn-primary">ORDER NOW</button>
-            <button className="btn-secondary">VIEW MENU</button>
+            <a
+              className="btn-primary"
+              href="https://order.toasttab.com/online/texas-craft-wings-lake-conroe"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Order online via Toast"
+            >
+              ORDER NOW
+            </a>
+            <Link className="btn-secondary" to="/menu">
+              VIEW MENU
+            </Link>
           </div>
         </div>
         <div className="hero-image">

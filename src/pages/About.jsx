@@ -29,13 +29,13 @@ const About = () => {
               </p>
             </div>
             <div className="about-image">
-              <img src="https://images.unsplash.com/photo-1603110788540-1d135ca9cc20?w=600" alt="Kitchen" />
+              <img src="https://tse4.mm.bing.net/th/id/OIP.pyLO_KgAE8fsPRBA7XZtbQHaE8?pid=Api&P=0&h=220" alt="Kitchen" />
             </div>
           </div>
 
           <div className="about-section reverse">
             <div className="about-image">
-              <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600" alt="Wings" />
+              <img src="https://tse1.mm.bing.net/th/id/OIP.5zMtFhQ46NpCL9DqF6d6SgHaHa?pid=Api&P=0&h=220" alt="Wings" />
             </div>
             <div className="about-text">
               <h2>Our Mission</h2>

@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Locations from './pages/Locations'
-import Specials from './pages/Specials'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import AdminPanel from './pages/AdminPanel'
@@ -28,7 +27,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/locations" element={<Locations />} />
-          <Route path="/specials" element={<Specials />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
