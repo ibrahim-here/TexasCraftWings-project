@@ -70,6 +70,7 @@
 
 
 
+
   - Add DealsSection component between InstagramReels and FeatureHighlights
   - Verify proper rendering order and spacing
   - _Requirements: 1.1_
